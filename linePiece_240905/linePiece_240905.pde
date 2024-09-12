@@ -47,4 +47,7 @@ void draw() {
   line(431, 144, 679, 629);  
   line(379, 713, 691, 11);
   
+  if(frameCount == 1) {
+    save("linePiece_2024-09-05.png");
+  }
 }
