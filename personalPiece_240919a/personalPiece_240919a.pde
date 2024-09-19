@@ -31,5 +31,10 @@ void setup() {
   line(-10, 48, -10, 29);  
   line(0, 48, 0, 29);  
   line(-75, 38, -43, 38);
-  line(-75, -38, -43, -38);  
+  line(1, 38, 36, 38);  
+  
+   if(frameCount == 1) {
+    save("personalPiece_2024-09-18.png");
+  }
+  
  }
