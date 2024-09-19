@@ -51,7 +51,9 @@ void draw() {
   circle(0, 0, 37);
   popMatrix();
   
-
+ if(frameCount == 1) {
+    save("replicaPiece_2024-09-18.png");
+  }
   
   
 }
