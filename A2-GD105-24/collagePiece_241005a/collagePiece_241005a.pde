@@ -43,12 +43,36 @@ void draw() {
   
   // foreground images 
   
+  // in the cell
   image(sign, -166, 137, 370, 370);
-  image(water, 53, -4, 225, 225);
-  image(children, -216, -53, 252, 252);
   image(dancing, 59, 192, 240, 240);
-  image(maize, 271, -47, 220, 220);
+
+  // being prayed for
+  
+  image(water, 98, -44, 225, 225);
+  image(maize, 194, -70, 220, 220);
+  
+  //in the burial ground
+  
   tint(#434d59);
-  image(homer, -158, -188, 220, 220);
+  image(homer, -235, -214, 220, 220);
   noTint();
+  image(children, -216, -53, 252, 252);
+  
+/* Artist Comments I suppose
+The placement with each image is important and has meaning with the correlating 
+background. The dancing man statue is in the prision cell because the prision cell is
+an art piece with vibrant colours and they both reminded me of how people have to 
+keep high spirits while in such sorrow moments in their lives like being inprisioned.
+The sign was at Eastern State Penitentiary so it fit perfect for what I wanted.
+The two images being prayed by the pastors are two religous imagery from indigenous
+societies throughout the globe. The children relate with the background of the graveyard
+because the children were civil rights activist who were willing to die for what they
+believed in. The homer was something used for post death celebration for civilizations
+around the Mediterranean Sea.
+*/  
+
+if(frameCount == 1) {
+    save("collagePiece_2024-10-5.png");
+ }
 }
