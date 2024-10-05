@@ -34,13 +34,21 @@ void setup() {
 void draw() {
   background(255);
   translate(width/2, height/2);
+  
+  // background images
+  
   image(grave, -123, -121, 420, 420);
   image(pastors, 170, -125, 420, 420);
   image(cell, -8, 209, 846, 255);
-  image(sign, 0, 0);
-  image(water, 0, 0);
-  image(maize, 0, 0);
-  image(children, 0, 0);
-  image(homer, 0, 0);
-  image(dancing, 0, 0);
+  
+  // foreground images 
+  
+  image(sign, -166, 137, 370, 370);
+  image(water, 53, -4, 225, 225);
+  image(children, -216, -53, 252, 252);
+  image(dancing, 59, 192, 240, 240);
+  image(maize, 271, -47, 220, 220);
+  tint(#434d59);
+  image(homer, -158, -188, 220, 220);
+  noTint();
 }
