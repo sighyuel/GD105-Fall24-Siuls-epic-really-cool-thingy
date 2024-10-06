@@ -35,29 +35,20 @@ void draw() {
   background(255);
   translate(width/2, height/2);
   
-  // background images
-  
-  image(grave, -123, -121, 420, 420);
-  image(pastors, 170, -125, 420, 420);
-  image(cell, -8, 209, 846, 255);
-  
-  // foreground images 
-  
-  // in the cell
-  image(sign, -166, 137, 370, 370);
-  image(dancing, 59, 192, 240, 240);
+  // background image
 
-  // being prayed for
-  
-  image(water, 98, -44, 225, 225);
-  image(maize, 194, -70, 220, 220);
-  
-  //in the burial ground
-  
+  image(grave, 0, 0, 666, 666);
+
+  // foreground images   
+  image(pastors, -185, 40, 260, 260);
   tint(#434d59);
-  image(homer, -235, -214, 220, 220);
+  image(sign, 272, -99, 370, 370);
+  image(dancing, 238, 90, 240, 240);  
+  image(water, 154, 27, 320, 320);
+  image(homer, 13, 4, 220, 220);
+  image(maize, 22, 116, 220, 220);  
   noTint();
-  image(children, -216, -53, 252, 252);
+  image(children, -160, 68, 252, 252);
   
 /* Artist Comments I suppose
 The placement with each image is important and has meaning with the correlating 
