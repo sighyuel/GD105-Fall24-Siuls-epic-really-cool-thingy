@@ -1,6 +1,5 @@
 void setup() {
   size(666,666);
-  rectMode(CENTER);
 }
 
 
@@ -12,4 +11,8 @@ void draw() {
   line(random(333, 666), random(333, 666), random(333, 666), random(333, 666));
   rect(random(333), random(333, 666), 30, 30);
   ellipse(random(333, 666), random(333), 60, 30);
+  
+  if(frameCount == 500) {
+    save("randomShapes_2024_10_6.png");
+  }
 }
