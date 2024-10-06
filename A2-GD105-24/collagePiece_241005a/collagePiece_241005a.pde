@@ -38,8 +38,8 @@ void draw() {
   image(grave, 0, 0, 666, 666);
 
   // foreground images   
-  image(pastors, -15, 40, 255, 322);
   tint(#434d59);
+  image(pastors, -15, 40, 255, 322);
   image(sign, 272, -99, 370, 370);
   image(dancing, 238, 90, 240, 240);  
   image(water, 182, 27, 320, 320);
