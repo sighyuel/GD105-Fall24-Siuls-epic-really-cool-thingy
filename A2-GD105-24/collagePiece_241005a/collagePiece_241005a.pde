@@ -38,15 +38,15 @@ void draw() {
   image(grave, 0, 0, 666, 666);
 
   // foreground images   
-  image(pastors, -185, 40, 260, 260);
+  image(pastors, -15, 40, 255, 322);
   tint(#434d59);
   image(sign, 272, -99, 370, 370);
   image(dancing, 238, 90, 240, 240);  
-  image(water, 154, 27, 320, 320);
-  image(homer, 13, 4, 220, 220);
-  image(maize, 22, 116, 220, 220);  
+  image(water, 182, 27, 320, 320);
+  image(homer, -229, 4, 220, 220);
+  image(maize, -229, 133, 220, 220);  
   noTint();
-  image(children, -160, 68, 252, 252);
+  image(children, 24, 93, 355, 430);
 
 if(frameCount == 1) {
     save("collagePiece_2024-10-5.png");    
