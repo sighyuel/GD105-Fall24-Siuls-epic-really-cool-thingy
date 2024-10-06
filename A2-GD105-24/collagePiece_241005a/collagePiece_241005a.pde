@@ -12,7 +12,6 @@ PImage children;
 PImage dancing;
 PImage homer;
 PImage maize;
-PImage cell;
 PImage sign;
 PImage water;
 PImage pastors;
@@ -24,7 +23,6 @@ void setup() {
   dancing = loadImage("dancingMan.png"); // Penn Museum
   homer = loadImage("homer.png"); // Penn Museum
   maize = loadImage("maize.png"); // Penn Museum
-  cell = loadImage("prisionCell.png"); // Eastern State Penitentiary
   sign = loadImage("prisonSign.png"); // Eastern State Penitentiary
   water = loadImage("waterGoddess.png"); // Penn Museum
   pastors = loadImage("pastors.png"); // 16th street baptist church
@@ -49,21 +47,18 @@ void draw() {
   image(maize, 22, 116, 220, 220);  
   noTint();
   image(children, -160, 68, 252, 252);
-  
-/* Artist Comments I suppose
-The placement with each image is important and has meaning with the correlating 
-background. The dancing man statue is in the prision cell because the prision cell is
-an art piece with vibrant colours and they both reminded me of how people have to 
-keep high spirits while in such sorrow moments in their lives like being inprisioned.
-The sign was at Eastern State Penitentiary so it fit perfect for what I wanted.
-The two images being prayed by the pastors are two religous imagery from indigenous
-societies throughout the globe. The children relate with the background of the graveyard
-because the children were civil rights activist who were willing to die for what they
-believed in. The homer was something used for post death celebration for civilizations
-around the Mediterranean Sea.
-*/  
 
 if(frameCount == 1) {
-    save("collagePiece_2024-10-5.png");
+    save("collagePiece_2024-10-5.png");    
  }
+ 
+/* Artist Comments :)
+All the images I've selected represent death and show the consequences. The children
+crying to the pastors represents the despair we get from death and how it can make us
+look anywhere for just a glimmer of hope. The homer, maize, and water goddess shows 
+other cultures represent death in a grim way as well. The dancing man shows that some
+cultures celebrate death and see it as a good thing that we should all be happy for, 
+as if its some graduation to the next stage of life. The sign represents the prision
+our emotions can lock us into when we face something so challenging as death.
+*/
 }
