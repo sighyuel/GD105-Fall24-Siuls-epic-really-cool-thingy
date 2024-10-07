@@ -38,20 +38,23 @@ void draw() {
   image(grave, 0, 0, 666, 666);
 
   // foreground images   
-  tint(#434d59);
+ 
+  tint(#434d59); // give the correct colouring to images not from the backgroung
   image(pastors, -15, 40, 255, 322);
   image(sign, 272, -99, 370, 370);
   image(dancing, 238, 90, 240, 240);  
   image(water, 182, 27, 320, 320);
   image(homer, -229, 4, 220, 220);
   image(maize, -229, 133, 220, 220);  
-  noTint();
+  noTint(); // removing the colouring for the last imaging
+  
   image(children, 24, 93, 355, 430);
 
 if(frameCount == 1) {
     save("collagePiece_2024-10-5.png");    
  }
- 
+}
+
 /* Artist Comments :)
 All the images I've selected represent death and show the consequences. The children
 crying to the pastors represents the despair we get from death and how it can make us
@@ -61,4 +64,3 @@ cultures celebrate death and see it as a good thing that we should all be happy 
 as if its some graduation to the next stage of life. The sign represents the prision
 our emotions can lock us into when we face something so challenging as death.
 */
-}

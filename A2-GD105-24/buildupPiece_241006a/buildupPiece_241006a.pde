@@ -14,7 +14,4 @@ void draw() {
  circle(sin(50), frameCount*.03, 50);
  println(frameCount);
  
- if(frameCount <= 8000) {
-   saveFrame("frames/frame-######.png");
- }
 }
