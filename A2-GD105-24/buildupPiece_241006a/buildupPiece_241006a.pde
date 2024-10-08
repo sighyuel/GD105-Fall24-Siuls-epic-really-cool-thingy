@@ -11,7 +11,7 @@ void draw() {
  fill(random(250), random(250), 215);
  noStroke();
  rotate(frameCount);
- circle(sin(50), frameCount*.03, 50);
+ circle(sin(1), frameCount*.03, 50);
  println(frameCount);
  
 }
