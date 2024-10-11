@@ -42,16 +42,13 @@ void draw() {
  // setup for the movement of the portal opening
  
  rotate(frameCount);
-<<<<<<< HEAD
- circle(sin(100), frameCount*.1, 50);
  println(frameCount);
- 
-=======
  circle(sin(1), frameCount*.03, 50);
  
  // keeping track of the amount of frames for future functions
  
  println(frameCount);
+
  
  if(frameCount <= 15000) {
    saveFrame("frames/frame-######.png");
@@ -62,8 +59,6 @@ void draw() {
  if(frameCount >= 14000) {
     circle(x, y, 50);
  }
-   
->>>>>>> b00ea510acd5dd90bae3bfb5335e58c1ffd9ec88
 }
 
 void mouseClicked() {

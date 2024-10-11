@@ -1,27 +1,27 @@
 /*
-<<<<<<< HEAD
-For my XY piece I wanted to make a gif that moves 
-*/
-=======
-I want to make a peice that grows and shrinks while moving left to right while 
-changing colors with a randomness but also with some continuity. I want someone to 
-look at it and say oooooooooo and ahhhhhhhh.
+I want to create an orbiting circle. I also want it to change colour with some 
+randomness but like have it all be pretty similar colours. Overall I just want it 
+to be pretty cool and amazing and stuff like that.
 */
 
->>>>>>> b00ea510acd5dd90bae3bfb5335e58c1ffd9ec88
 void setup() {
-  size(666,666);
+ size(666,666); 
+ frameRate(3);
+ colorMode(HSB, 400);
+ r = height * 0.42;
+ theta = 0.999;
+ thetaSpeed = 0.05;
 }
 
 void draw() {
-<<<<<<< HEAD
- background(255);
- translate(width/2, height/2);
- rotate(frameRate);
- circle(noise(1), noise(0), 30);
-=======
-  background(255);
-  translate(width/2, height/2);
-  circle(noise(1 ,0 ,0), noise(1, 0, 1), 50);
->>>>>>> b00ea510acd5dd90bae3bfb5335e58c1ffd9ec88
+ 
+ float x = r * cos(theta);
+ float y = r * sin(theta);
+ background(#ffffff);
+ translate(width * 0.5, height * 0.5);
+ rotate(frameCount * 0.03);
+ fill(randomColorPickin());
+ strokeWeight(3);
+ circle(x, y, 50);
+
 }
