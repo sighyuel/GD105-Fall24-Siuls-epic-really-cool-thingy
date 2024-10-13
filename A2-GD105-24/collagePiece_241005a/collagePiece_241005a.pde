@@ -13,7 +13,8 @@ look anywhere for just a glimmer of hope. The homer, maize, and water goddess sh
 other cultures represent death in a grim way as well. The dancing man shows that some
 cultures celebrate death and see it as a good thing that we should all be happy for, 
 as if its some graduation to the next stage of life. The sign represents the prision
-our emotions can lock us into when we face something so challenging as death.
+our emotions can lock us into when we face something so challenging as death. It also 
+can represent how death is an escape from the prision that is life.
 */
 
 
