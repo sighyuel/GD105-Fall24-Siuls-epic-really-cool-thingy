@@ -5,17 +5,20 @@ float theta; // measured angel
 float thetaSpeed; // speed of the orbiting circle
 
 
+
 // random colorin' for the circle movin'
 
 color randomColorPickin(){
   
-  int h, s, b;
+  int r, g, b;
   
-  h = round(random(0, 1));
-  s = round(random(0, 1));
-  b = round(random(0, 1));
+  r = round(random(70, 180));
+  g = round(random(70, 180));
+  b = round(random(70, 180));
   
-  color rainbow = color(h, s, b);
+  color rainbow = color(r, g, b);
   return rainbow;
+  
+
 }
   
