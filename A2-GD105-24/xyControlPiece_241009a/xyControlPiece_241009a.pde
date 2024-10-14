@@ -7,8 +7,11 @@ colours. Overall I just want it to be pretty cool and amazing and stuff like tha
 void setup() {
  size(666,666); 
  frameRate(30); // protect from too intensive of switching of colors and size
+ 
  r = height * 0.42; // keeps the circle in canvas
+ 
  theta = 0.99; // angel
+ 
  thetaSpeed = 0.05; // makes the orbit a consistent speed
 }
 
@@ -24,9 +27,17 @@ void draw() {
 
  background(#ffffff);
  translate(width * 0.5, height * 0.5); // moving origin point
+ 
  rotate(frameCount * 0.03); // controls speed of rotation
+ 
  fill(randomColorPickin()); // pickin of random colours
+ 
  strokeWeight(3); // consistent outline with unconsistent size thinks its cool :)
+ 
  circle(x, y, z*100);
  
+ println(frameCount);
+   if(frameCount <= 210){
+     saveFrame("frames/frame-###.png");
+   } 
 }
