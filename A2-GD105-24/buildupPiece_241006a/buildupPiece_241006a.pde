@@ -65,7 +65,5 @@ void draw() {
 void mouseClicked() {
  saveFrame("buildUpPiece.png"); 
  println("Done!!!");
- 
-
 }
   
