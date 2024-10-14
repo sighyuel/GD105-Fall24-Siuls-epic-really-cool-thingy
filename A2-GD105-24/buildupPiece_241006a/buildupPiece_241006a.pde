@@ -15,14 +15,14 @@ float thetaSpeed; // speed of the thingy movin'
 void setup() {
   size(666, 666);
   noSmooth();
-  frameRate(50);
+  frameRate(5000);
   background(255);
   randomSeed(5764753L); // random set of numbers my cousin picked
    
   // setting up the border of the portal
    
-  r = height * 0.51;
-  theta = 1;
+  r = height * 0.54;
+  theta = 0.9;
   thetaSpeed = 0.005;
 }
 
@@ -42,12 +42,13 @@ void draw() {
  // setup for the movement of the portal opening
  
  rotate(frameCount);
- println(frameCount);
  circle(sin(1), frameCount*.03, 50);
  
  // keeping track of the amount of frames for future functions
  
  println(frameCount);
+ 
+
 
  
  if(frameCount <= 15000) {
@@ -56,7 +57,7 @@ void draw() {
 
  // outer layer being constructed when the original circle leaves the boundary
  
- if(frameCount >= 14000) {
+ if(frameCount >= 12000) {
     circle(x, y, 50);
  }
 }
@@ -64,5 +65,7 @@ void draw() {
 void mouseClicked() {
  saveFrame("buildUpPiece.png"); 
  println("Done!!!");
+ 
+
 }
   
