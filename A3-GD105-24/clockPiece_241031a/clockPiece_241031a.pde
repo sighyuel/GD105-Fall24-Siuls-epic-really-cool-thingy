@@ -10,4 +10,10 @@ PImage Winter;
 PImage Ray;
 PImage Three;
 PImage Wave;
-PImage
+PImage Acid;
+PImage Bow;
+PImage Staff;
+PImage Waffe;
+PImage Thunder;
+PImage Baby;
+PImage ApSe;
