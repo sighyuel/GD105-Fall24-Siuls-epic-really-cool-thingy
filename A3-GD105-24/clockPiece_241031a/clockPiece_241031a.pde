@@ -35,7 +35,7 @@ void draw(){
   
   // decorations to make her cute!!
   
-  image(bat, 276, 281, 500, 500);
+  image(bat, 275, 280, 500, 500);
   image(web, 950, 265, 400, 400);
   textFont(Spooky);
   text("BOO!!!!!!!", 190, 800);
@@ -154,4 +154,7 @@ void draw(){
     image(pump, 1150, height/2, 90, 80);
   }  
   
+  if(frameCount == 1){
+    save("clockPiece_2024-11-2.png");
+  }
 }
