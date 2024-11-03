@@ -9,7 +9,7 @@ PImage bat;
 PImage web;
 PFont Spooky;
 float minuteHand;
-
+int colour;
 
 void setup() {
   size(1200,1200);
@@ -27,11 +27,8 @@ void draw(){
   
   // colors for AM and PM 
  
-  if(presentHour < 12){
-    background(#540076); // purple
-  } else{
-    background(#000000); // black
-  }
+  colour = (hour() < 12) ? #540076 : #000000;
+  background(colour);
   
   // decorations to make her cute!!
   
@@ -154,7 +151,5 @@ void draw(){
     image(pump, 1150, height/2, 90, 80);
   }  
   
-  if(frameCount == 1){
-    save("clockPiece_2024-11-2.png");
-  }
+
 }
