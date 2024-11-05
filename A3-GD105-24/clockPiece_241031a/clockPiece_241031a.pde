@@ -1,7 +1,8 @@
 /*
 For this piece I will be making a halloween themed clock for spooky season! It will be
 wonderfully decorated for halloween time. I will use Jack-o-laterns to represent the 
-hour hands and they will rotate and allow the 
+hour hands and they will rotate and allow the person looking at the piece to tell the
+minute of the hour as well
 */
 
 PImage pump;
