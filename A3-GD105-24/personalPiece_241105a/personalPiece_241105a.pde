@@ -20,13 +20,34 @@ PImage[] summerFiles = new PImage[summerNames.length];
 String[] fallNames = { "Turkey.png", "Muertos.png", "Pumpkin.png" };
 PImage[] fallFiles = new PImage[fallNames.length];
 
+// setting the months 
+int[] winterMonths = { 12, 1 ,2};
+int[] springMonths = { 3, 4, 5};
+int[] summerMonths = { 6, 7, 8};
+int[] fallMonths = { 9, 10, 11};
+
+// background colours
+color[] winterColors = { #FFFFFF, #6DD4F0 };
+color[] springColors = { #E6E6FA, #C8A2C8 }; 
+color[] summerColors = { #FDFD96, #77DD77 };
+color[] fallColors = { #964B00, #964B00};
+
 void setup(){
   size(666,666);
+  imageMode(CENTER);
   for(int i = 0; i < springNames.length; i++){
     winterFiles[i] = loadImage(winterNames[i]);
     springFiles[i] = loadImage(springNames[i]);
     summerFiles[i] = loadImage(summerNames[i]);
     fallFiles[i] = loadImage(fallNames[i]);
   }
+  
+}
+
+void draw(){
+  background(#FFFFFF);
+ 
+  // patterned backgrounds
+  strokeWeight(130);
   
 }
