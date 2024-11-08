@@ -37,7 +37,7 @@ void draw() {
  circle(x, y, z*100);
  
  println(frameCount);
-   if(frameCount <= 210){
-     saveFrame("frames/frame-###.png");
-   } 
+   //if(frameCount <= 210){
+   //  saveFrame("frames/frame-###.png");
+   //} 
 }

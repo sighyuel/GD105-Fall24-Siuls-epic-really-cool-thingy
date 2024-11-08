@@ -51,9 +51,9 @@ void draw() {
 
 
  
- if(frameCount <= 15000) {
-   saveFrame("frames/frame-######.png");
- }
+ //if(frameCount <= 15000) {
+ //  saveFrame("frames/frame-######.png");
+ //}
 
  // outer layer being constructed when the original circle leaves the boundary
  
