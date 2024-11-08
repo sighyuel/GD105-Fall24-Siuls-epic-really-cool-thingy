@@ -26,11 +26,14 @@ int[] springMonths = { 3, 4, 5};
 int[] summerMonths = { 6, 7, 8};
 int[] fallMonths = { 9, 10, 11};
 
+int currentMonth;
+
 // background colours
 color[] winterColors = { #FFFFFF, #6DD4F0 };
 color[] springColors = { #E6E6FA, #C8A2C8 }; 
 color[] summerColors = { #FDFD96, #77DD77 };
 color[] fallColors = { #964B00, #964B00};
+
 
 void setup(){
   size(666,666);
@@ -41,7 +44,12 @@ void setup(){
     summerFiles[i] = loadImage(summerNames[i]);
     fallFiles[i] = loadImage(fallNames[i]);
   }
-  
+ 
+  // Images are in different positions everytime
+  float post1 = random(111, 555);
+  float post2 = random(111, 555);
+  float post3 = random(111, 555);
+    
 }
 
 void draw(){
@@ -49,5 +57,13 @@ void draw(){
  
   // patterned backgrounds
   strokeWeight(130);
+  
+  // variable for current month
+  currentMonth = month();
+  
+
+
+    
+  image(winterFiles[0], post1, post1);
   
 }
