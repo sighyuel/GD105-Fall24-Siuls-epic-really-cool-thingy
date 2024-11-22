@@ -64,6 +64,6 @@ void draw(){
 
 
     
-  image(winterFiles[0], post1, post1);
+
   
 }

@@ -32,7 +32,7 @@ void draw() {
   
   println(frameCount); // tracking when to take a picture
   
-  if(frameCount == 900) {
-    save("randomShapes_2024_10_6.png");
-  }
+  //if(frameCount == 900) {
+  //  save("randomShapes_2024_10_6.png");
+  //}
 }

@@ -62,7 +62,7 @@ void draw() {
   
   image(children, 24, 93, 355, 430);
 
-if(frameCount == 1) {
-    save("collagePiece_2024-10-5.png");    
- }
+//if(frameCount == 1) {
+//    save("collagePiece_2024-10-5.png");    
+// }
 }
