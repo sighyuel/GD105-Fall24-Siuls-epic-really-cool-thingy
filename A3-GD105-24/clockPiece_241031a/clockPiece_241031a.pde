@@ -29,7 +29,7 @@ void draw(){
   
   // colors for AM and PM 
  
-  colour = (hour() < 12) ? #540076 : #000000;
+  colour = (hour() > 12) ? #540076 : #000000;
   background(colour);
   
   // decorations to make her cute!!
