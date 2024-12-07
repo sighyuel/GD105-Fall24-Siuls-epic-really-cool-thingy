@@ -1,20 +1,20 @@
 class Particle {
 
   PVector pos, acceleration, velocity;
-  color pallete; // pallete of the 
+  color pallete; // pallete of the orbs
   int size;
 
   Particle(float x, float y, int s){
     pos =  new PVector(x, y);
     velocity =  PVector.random2D();
-    acceleration = new PVector(0,0);
+    acceleration = new PVector(0.075,0.075); // slows down the speed of the orbs
     size = s;
-    pallete = color(random(250), random(250), 215);
+    pallete = color(random(250), random(250), 215); // blues and purples and pinks
   }
 
   void display() {  
     fill(pallete); 
-    stroke(15); // no stroke so we just see the colours
+    noStroke();
     circle(pos.x, pos.y, size);
     
 
@@ -24,7 +24,7 @@ class Particle {
     pos.add(velocity);
     velocity.add(acceleration);
    
- // Check for collisions with walls and reverse velocity
+ // Check for collisions with walls and reverse velocity makes orbs bounce
     if (pos.x - size / 2 <= 0 || pos.x + size / 2 >= width) {
       velocity.x *= -1;
     }
