@@ -39,10 +39,9 @@ class Bullet{
     fill(#00ff00, 32);
     circle(634, 402, 548);
     if(size/2 + 548/2 > dist(mouseX, mouseY, 634, 402)){
-      pushMatrix();
       tint(#EA6F6F);
       image(Target2, 300, 135);
-      popMatrix();
+      tint(#FFFFFF);
     }
   }
 }

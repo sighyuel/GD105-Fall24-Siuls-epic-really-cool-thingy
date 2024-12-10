@@ -2,9 +2,9 @@
 I want to make a gun that shoots three different colour pellets depending on which 
 button is pressed. Depending on the colour of the bullet the speed will vary.
 */
-
+Target e;
 Bullet b;
-PImage Target,Target2, Tool;
+PImage Target, Target2, Tool;
 int[] bulletSize = {15, 20, 60};
 float hor = width/2.0;
 float BTdist = dist(hor, height/2.0, 320, 175);
@@ -15,6 +15,7 @@ void setup(){
   size(666, 666);
   background(255);
   imagePos = new PVector(555.0, 400.0);
+  e = new Target(imagePos.x, imagePos.y, 1.0, 1.0, 225, "normalState", "hitState");
   b = new Bullet(99999, 99999, "type");
   Target = loadImage("Target.png");
   Target2 = loadImage("Target2.png");
@@ -23,8 +24,8 @@ void setup(){
 
 void draw(){
   background(255);
-  image(Tool, mouseX - 80, mouseY + 35);
-  image(Target, imagePos.x, imagePos.y);
+  image(Tool, mouseX - 75, mouseY + 35);
+  e.display();
   b.update();
   b.display();
   imageMode(CENTER);
