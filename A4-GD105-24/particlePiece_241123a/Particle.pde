@@ -3,7 +3,8 @@ class Particle {
   PVector pos, acceleration, velocity;
   color pallete; // pallete of the orbs
   int size;
-
+  
+  // constructors for particle
   Particle(float x, float y, int s){
     pos =  new PVector(x, y);
     velocity =  PVector.random2D();
