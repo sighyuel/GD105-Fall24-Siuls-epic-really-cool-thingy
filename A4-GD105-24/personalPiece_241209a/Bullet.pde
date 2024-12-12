@@ -5,8 +5,11 @@ class Bullet{
   color c;
   int size;
   
+  // constructor for the bullets
   Bullet(float x, float y, String type){
     pos = new PVector(x, y);
+    
+    // puts all the bullets for specific colours and sizes and speeds depending on the size
     switch(type){
       case "slow":
         speed = new PVector(0.75, 0.0);
@@ -27,13 +30,14 @@ class Bullet{
     
   }
   
+  // displays the bullet themselves
   void display(){
     fill(c);
     noStroke();
     circle(pos.x, pos.y, size);
   }
   
-  // collision goes here arrow pointign downwards
+   // adds bullet travel
   void update(){
     pos.add(speed);
     fill(#00ff00, 32);
