@@ -7,15 +7,17 @@ Bullet b;
 PImage Target, Target2, Tool;
 int[] bulletSize = {15, 20, 60};
 float hor = width/2.0;
-float BTdist = dist(hor, height/2.0, 320, 175);
+//float BTdist = dist(hor, height/2.0, 320, 175);
 int chargeTime = millis();
 PVector imagePos;
+String normalState, hitState;
+
 
 void setup(){
   size(666, 666);
   background(255);
   imagePos = new PVector(555.0, 400.0);
-  e = new Target(imagePos.x, imagePos.y, 1.0, 1.0, 225, "normalState", "hitState");
+  e = new Target(imagePos.x, imagePos.y, "Target"); 
   b = new Bullet(99999, 99999, "type");
   Target = loadImage("Target.png");
   Target2 = loadImage("Target2.png");
@@ -29,7 +31,8 @@ void draw(){
   b.update();
   b.display();
   imageMode(CENTER);
-  //circle(444, 222, 50);
+  
+
 
 }
 
