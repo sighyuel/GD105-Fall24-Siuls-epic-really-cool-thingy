@@ -36,5 +36,6 @@ class Target{
       tint(#EA6F6F); 
       image(hitState, pos.x, pos.y);
       noTint();
+      
     } 
 }

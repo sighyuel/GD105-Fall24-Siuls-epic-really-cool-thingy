@@ -1,3 +1,6 @@
+import processing.sound.*;
+SoundFile coinSound, deathSound, bgm;
+
 Car car;
 ArrayList<Coin> coins;
 int collectedCoins = 0;
@@ -12,15 +15,20 @@ void setup() {
   car = new Car();
   coins = new ArrayList<Coin>();
   lastTime = millis(); // Initialize time tracker
-
+  
+  // Sounds for game
+  coinSound = new SoundFile(this, "coinSound.wav");
+  deathSound = new SoundFile(this, "endNoise.wav");
+  bgm = new SoundFile(this, "background.wav");
   // Create the track mask
   trackMask = createGraphics(width, height);
   drawRaceTrack();
-
+  
   // Add initial coins
   for (int i = 0; i < 15; i++) { // More coins since the track is larger
     coins.add(new Coin());
   }
+  bgm.play();
 }
 
 void draw() {
@@ -35,7 +43,7 @@ void draw() {
     if (timer <= 0) {
       gameOver = true;
     }
-
+    
     // Draw the track
     image(trackMask, 0, 0);
 
@@ -49,12 +57,11 @@ void draw() {
       c.display();
 
       if (car.collects(c)) {
+        coinSound.play(1.0, 0.10);
         coins.remove(i);
         collectedCoins++;
         car.speed += 0.25; // Increase car speed
         coins.add(new Coin()); // Add a new coin
-        
-        
         // Reset timer based on collected coins
         timer = 15 - (collectedCoins / 3);
         if (timer < 2){
@@ -82,6 +89,11 @@ void draw() {
     textSize(20);
     text("Retry", width / 2 - 30, height / 2 + 55);
   }
+  if (gameOver){
+    deathSound.play(1, 0.0);
+  }
+  
+
 }
 
 // Reset game
@@ -174,99 +186,6 @@ void drawRaceTrack() {
 
 
 
-
-
-
-
-//class Car {
-//  float x, y;
-//  float speed = 1.5; // Adjusted for smaller scale
-//  float size = tileSize - 4; // Slightly smaller than a tile for visibility
-
-//  Car() {
-//    x = tileSize * 10; // Start on the track
-//    y = tileSize * 10;
-//  }
-
-//  void update() {
-//    float nextX = x;
-//    float nextY = y;
-
-//    // Handle diagonal movement first
-//    if (keysPressed.contains('w') && keysPressed.contains('a')) {
-//      if (isOnTrack(x - speed, y)) nextX -= speed;
-//      if (isOnTrack(x, y - speed)) nextY -= speed;
-//    } else if (keysPressed.contains('w') && keysPressed.contains('d')) {
-//      if (isOnTrack(x + speed, y)) nextX += speed;
-//      if (isOnTrack(x, y - speed)) nextY -= speed;
-//    } else if (keysPressed.contains('s') && keysPressed.contains('a')) {
-//      if (isOnTrack(x - speed, y)) nextX -= speed;
-//      if (isOnTrack(x, y + speed)) nextY += speed;
-//    } else if (keysPressed.contains('s') && keysPressed.contains('d')) {
-//      if (isOnTrack(x + speed, y)) nextX += speed;
-//      if (isOnTrack(x, y + speed)) nextY += speed;
-//    } else {
-//      // Handle non-diagonal movement
-//      if (keysPressed.contains('w') && isOnTrack(x, y - speed)) nextY -= speed;
-//      if (keysPressed.contains('s') && isOnTrack(x, y + speed)) nextY += speed;
-//      if (keysPressed.contains('a') && isOnTrack(x - speed, y)) nextX -= speed;
-//      if (keysPressed.contains('d') && isOnTrack(x + speed, y)) nextX += speed;
-//    }
-
-//    x = nextX;
-//    y = nextY;
-//  }
-
-//  void display() {
-//    fill(255, 0, 0);
-//    rect(x, y, size, size);
-//  }
-
-//  boolean collects(Coin c) {
-//    float d = dist(x + size / 2, y + size / 2, c.x, c.y);
-//    return d < size / 2 + c.size / 2;
-//  }
-
-//  boolean isOnTrack(float px, float py) {
-//    // Check all four corners of the car
-//    return isPixelOnTrack(px, py) && 
-//           isPixelOnTrack(px + size, py) && 
-//           isPixelOnTrack(px, py + size) && 
-//           isPixelOnTrack(px + size, py + size);
-//  }
-
-//  boolean isPixelOnTrack(float px, float py) {
-//    // Sample the mask color at the given position
-//    if (px < 0 || px >= width || py < 0 || py >= height) {
-//      return false; // Out of bounds
-//    }
-//    int c = trackMask.get((int)px, (int)py);
-//    return c == color(0); // Check if the color is black
-//  }
-//}
-
-//class Coin {
-//  float x, y;
-//  float size = tileSize / 2;
-
-//  Coin() {
-//    // Spawn coins only on black areas of the track
-//    do {
-//      x = floor(random(width / tileSize)) * tileSize + tileSize / 2;
-//      y = floor(random(height / tileSize)) * tileSize + tileSize / 2;
-//    } while (!isOnTrack(x, y));
-//  }
-
-//  void display() {
-//    fill(255, 223, 0);
-//    ellipse(x, y, size, size);
-//  }
-
-//  boolean isOnTrack(float px, float py) {
-//    int c = trackMask.get((int)px, (int)py);
-//    return c == color(0); // Check if the color is black
-//  }
-//}
 
 // Key press tracking
 ArrayList<Character> keysPressed = new ArrayList<Character>();
