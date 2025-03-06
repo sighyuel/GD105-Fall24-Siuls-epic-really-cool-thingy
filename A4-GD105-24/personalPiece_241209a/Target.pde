@@ -1,14 +1,17 @@
 class Target{
-  
-  PVector hurtBoxPos;
+  PVector bodyBoxPos;
+  PVector bodyBoxArea;
+  PVector headBoxPos;
   PVector pos;
   PImage normalState, hitState;
   int hurtRadius;
   
   // constructor for Elon's body
   Target(float x, float y, String Target){
-    hurtRadius = 215;
-    hurtBoxPos = new PVector(620.0, 400.0);
+    hurtRadius = 40;
+    bodyBoxPos = new PVector(470.0, 225.0);
+    bodyBoxArea = new PVector(175.0, 425.0);
+    headBoxPos = new PVector(555.0, 190.0);
     normalState = loadImage("Target.png");
     hitState = loadImage("Target2.png");
     pos = new PVector(x, y);
@@ -27,7 +30,8 @@ class Target{
       pushMatrix();
       noFill();
       image(normalState, pos.x, pos.y);
-      circle(hurtBoxPos.x, hurtBoxPos.y, hurtRadius*2 );
+      circle(headBoxPos.x, headBoxPos.y , hurtRadius*2);
+      rect(bodyBoxPos.x, bodyBoxPos.y, bodyBoxArea.x, bodyBoxArea.y);
       popMatrix();
     }
     
