@@ -9,13 +9,11 @@ PImage Tool;
 float hor = width/2.0;
 int chargeTime = millis();
 PVector imagePos;
-PVector d;
 
 
 void setup(){
   size(666, 666);
   background(255);
-  d = new PVector(2.0, 2.0);
   imagePos = new PVector(555.0, 400.0);
   e = new Target(imagePos.x, imagePos.y, "Target"); 
   b = new Bullet(99999, 99999, "type"); // original bullet shows offscreen 
@@ -29,16 +27,12 @@ void draw(){
   b.display(); // makes bullet spawn
   imageMode(CENTER);
   
-
-  // head collision detection
-  if (b.size/2 + e.hurtRadius > b.pos.dist(e.headBoxPos)){
+  // collision detection
+  if (b.size/2 + e.hurtRadius > b.pos.dist(e.hurtBoxPos)){
     e.update();
   } else {
     e.display();
   }
-  
-
-
   
 }
 

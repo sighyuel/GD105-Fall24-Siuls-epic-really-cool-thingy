@@ -13,7 +13,7 @@ class Bullet{
     switch(type){
       case "slow":
         speed = new PVector(0.75, 0.0);
-        c = 250;
+        c = #0000FF;
         size = 60;
         break; 
       case "medi":
