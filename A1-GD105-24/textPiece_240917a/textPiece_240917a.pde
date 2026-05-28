@@ -1,3 +1,6 @@
+/*
+Make text smaller and scale it to give it that pixelated look
+*/
 PFont Anarrow;
 
 void setup () {
