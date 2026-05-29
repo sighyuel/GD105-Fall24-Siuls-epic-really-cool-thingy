@@ -4,7 +4,7 @@ similar colours to make something move and be pretty.
 */
 
 int AmountLines = 222; // total lines for every colour
-float spacing = 30; //  space between the lines to make them not jumbled up
+float spacing = 50; //  space between the lines to make them not jumbled up
 float accell = 0.05; // acceleration of the movement of the lines
 
 void setup() {
@@ -53,7 +53,7 @@ void draw(){
    
    // makes the lines go to the left of the canvas till a certain point
    
-   if(spacing > 15){
+   if(spacing > 20){
      accell = -0.05;
    }
    
